@@ -6,7 +6,7 @@
 /*   By: yrabby <yrabby@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/18 14:00:59 by yrabby            #+#    #+#             */
-/*   Updated: 2023/02/05 17:52:40 by yrabby           ###   ########.fr       */
+/*   Updated: 2023/02/05 20:19:44 by yrabby           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ class Reader
 		Reader();
 		~Reader();
 		appStatus cli(void);
+		static std::string arg(std::string arg_name);
 };
 
 #endif

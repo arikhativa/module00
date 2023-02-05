@@ -6,24 +6,24 @@
 #    By: yrabby <yrabby@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/18 13:56:52 by yrabby            #+#    #+#              #
-#    Updated: 2023/02/05 17:25:17 by yrabby           ###   ########.fr        #
+#    Updated: 2023/02/05 20:10:26 by yrabby           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME 					= MyAwesomePhoneBook
 
 # src
-SRC_DIR					= ./
+SRC_DIR					= .
 SRC_NAME				= main.cpp PhoneBook.cpp Contact.cpp Reader.cpp App.cpp
 SRC						= $(addprefix $(SRC_DIR)/, $(SRC_NAME))
 
 # head
-HEAD_DIR				= ./
+HEAD_DIR				= .
 HEAD_NAME				= PhoneBook.hpp Contact.hpp Reader.hpp App.hpp
 HEAD					= $(addprefix $(HEAD_DIR)/, $(HEAD_NAME))
 
 # obj
-OBJ_DIR					= ./
+OBJ_DIR					= .
 OBJ						= $(SRC:.cpp=.o)
 
 # flags

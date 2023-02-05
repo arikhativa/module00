@@ -6,7 +6,7 @@
 /*   By: yrabby <yrabby@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/18 14:00:59 by yrabby            #+#    #+#             */
-/*   Updated: 2023/02/05 17:53:07 by yrabby           ###   ########.fr       */
+/*   Updated: 2023/02/05 20:11:52 by yrabby           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,4 +34,13 @@ appStatus Reader::cli(void)
 	else if (_EXIT_STR == input)
 		return (EXIT);
 	return (ERROR);
+}
+
+std::string Reader::arg(std::string arg_name)
+{
+	std::string input = "";
+
+	std::cout << arg_name << ":" << std::endl;
+	std::cin >> input;
+	return (input);
 }
