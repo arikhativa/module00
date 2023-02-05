@@ -6,20 +6,20 @@
 #    By: yrabby <yrabby@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/18 13:56:52 by yrabby            #+#    #+#              #
-#    Updated: 2022/12/18 14:04:15 by yrabby           ###   ########.fr        #
+#    Updated: 2023/02/05 17:25:17 by yrabby           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME 					= megaphone
+NAME 					= MyAwesomePhoneBook
 
 # src
 SRC_DIR					= ./
-SRC_NAME				= main.cpp PhoneBook.cpp Contact.cpp Reader.cpp
+SRC_NAME				= main.cpp PhoneBook.cpp Contact.cpp Reader.cpp App.cpp
 SRC						= $(addprefix $(SRC_DIR)/, $(SRC_NAME))
 
 # head
 HEAD_DIR				= ./
-HEAD_NAME				= PhoneBook.hpp Contact.hpp Reader.hpp
+HEAD_NAME				= PhoneBook.hpp Contact.hpp Reader.hpp App.hpp
 HEAD					= $(addprefix $(HEAD_DIR)/, $(HEAD_NAME))
 
 # obj

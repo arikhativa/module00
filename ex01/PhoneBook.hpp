@@ -6,7 +6,7 @@
 /*   By: yrabby <yrabby@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/18 14:00:59 by yrabby            #+#    #+#             */
-/*   Updated: 2023/01/26 18:03:27 by yrabby           ###   ########.fr       */
+/*   Updated: 2023/02/05 18:01:28 by yrabby           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,21 @@
 
 # define LIST_MAX_SIZE	8
 
+// TODO
+# include <iostream>
+
 # include "Contact.hpp"
 
 class PhoneBook
 {
 	private:
-		Contact	list[LIST_MAX_SIZE];
+		Contact	_list[LIST_MAX_SIZE];
+		int _get_contact_index(void);
 	public:
-		PhoneBook();
-		~PhoneBook();
+		PhoneBook(void);
+		~PhoneBook(void);
+		void add(void);
+		void search(void);
 };	
 
 #endif

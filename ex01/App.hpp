@@ -1,23 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   App.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yrabby <yrabby@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/18 14:01:23 by yrabby            #+#    #+#             */
-/*   Updated: 2023/02/05 17:22:41 by yrabby           ###   ########.fr       */
+/*   Created: 2022/12/18 14:00:59 by yrabby            #+#    #+#             */
+/*   Updated: 2023/02/05 17:52:25 by yrabby           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#ifndef APP_HPP
+# define APP_HPP
 
-#include "App.hpp"
+# include "Reader.hpp"
+# include "PhoneBook.hpp"
 
-int	main(void)
+class App
 {
-	App	a;
+	private:
+		Reader _r;
+		PhoneBook _pb;
+	public:
+		App();
+		~App();
+		void run(void);
+};
 
-	a.run();
-	return (EXIT_SUCCESS);
-}
+#endif
