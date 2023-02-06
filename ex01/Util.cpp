@@ -1,40 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Reader.hpp                                         :+:      :+:    :+:   */
+/*   Util.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yrabby <yrabby@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/18 14:00:59 by yrabby            #+#    #+#             */
-/*   Updated: 2023/02/06 09:57:18 by yrabby           ###   ########.fr       */
+/*   Updated: 2023/02/06 10:10:14 by yrabby           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef READER_HPP
-# define READER_HPP
+#include "Util.hpp"
 
-# include <iostream>
+// TODO prevent constructor
 
-# include "Contact.hpp"
-
-enum appStatus {
-	ERROR = -1,
-	ADD,
-	SEARCH,
-	EXIT
-};
-
-class Reader
+Util::Util()
 {
-	private:
-		const std::string _ADD_STR;
-		const std::string _SEARCH_STR;
-		const std::string _EXIT_STR;
-	public:
-		Reader();
-		~Reader();
-		appStatus cli(void);
-		static std::string arg(std::string arg_name);
-};
+}
 
-#endif
+Util::~Util()
+{
+}
+
+std::ostream	&Util::print_with_width(const std::string &s)
+{
+	if (s.length() > MAX_LEN)
+		std::cout << s.substr(0, MAX_LEN - 1) << '.';
+	else
+		std::cout << std::setw(MAX_LEN) << s;
+	return std::cout;
+}

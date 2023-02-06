@@ -1,40 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Reader.hpp                                         :+:      :+:    :+:   */
+/*   Util.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yrabby <yrabby@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/18 14:00:59 by yrabby            #+#    #+#             */
-/*   Updated: 2023/02/06 09:57:18 by yrabby           ###   ########.fr       */
+/*   Updated: 2023/02/06 10:10:09 by yrabby           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef READER_HPP
-# define READER_HPP
+#ifndef UTIL_HPP
+# define UTIL_HPP
 
+# include <sstream>
 # include <iostream>
+# include <string>
+# include <iomanip>
 
-# include "Contact.hpp"
+const size_t		MAX_LEN = 10;
 
-enum appStatus {
-	ERROR = -1,
-	ADD,
-	SEARCH,
-	EXIT
-};
-
-class Reader
+class Util
 {
 	private:
-		const std::string _ADD_STR;
-		const std::string _SEARCH_STR;
-		const std::string _EXIT_STR;
+		Util();
+		~Util();
 	public:
-		Reader();
-		~Reader();
-		appStatus cli(void);
-		static std::string arg(std::string arg_name);
+		static std::ostream	&print_with_width(const std::string &s);
 };
+
+template <typename T>
+std::string	to_string(T num)
+{
+	std::ostringstream ss;
+	ss << num;
+	return ss.str();
+}
 
 #endif

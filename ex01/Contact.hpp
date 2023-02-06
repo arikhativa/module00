@@ -6,7 +6,7 @@
 /*   By: yrabby <yrabby@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/18 14:00:59 by yrabby            #+#    #+#             */
-/*   Updated: 2023/02/05 21:06:15 by yrabby           ###   ########.fr       */
+/*   Updated: 2023/02/06 09:29:45 by yrabby           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,9 @@
 # include <iomanip>
 
 # include "Reader.hpp"
+# include "Util.hpp"
 
-# define SPACER	" | "
+const std::string	SPACER = " | ";
 
 // TODO
 // check if publick should be before private
@@ -31,8 +32,8 @@ class Contact
 		Contact();
 		~Contact();
 		void init(void);
-		void simple_print(int i);
-		bool empty(void);
+		void simple_print(int i) const;
+		bool empty(void) const;
 	private:
 		std::string	_first_name;
 		std::string _last_name;

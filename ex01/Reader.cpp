@@ -6,7 +6,7 @@
 /*   By: yrabby <yrabby@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/18 14:00:59 by yrabby            #+#    #+#             */
-/*   Updated: 2023/02/05 20:11:52 by yrabby           ###   ########.fr       */
+/*   Updated: 2023/02/06 09:57:21 by yrabby           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,5 +42,5 @@ std::string Reader::arg(std::string arg_name)
 
 	std::cout << arg_name << ":" << std::endl;
 	std::cin >> input;
-	return (input);
+	return input;
 }
