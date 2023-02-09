@@ -6,7 +6,7 @@
 /*   By: yrabby <yrabby@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/18 14:00:59 by yrabby            #+#    #+#             */
-/*   Updated: 2023/02/06 10:13:13 by yrabby           ###   ########.fr       */
+/*   Updated: 2023/02/09 15:06:01 by yrabby           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,13 @@
 
 # define LIST_MAX_SIZE	8
 
-// TODO
 # include <iostream>
+# include <stdlib.h>
+# include <ctype.h>
 
 # include "Util.hpp"
 # include "Contact.hpp"
+# include "Reader.hpp"
 
 class PhoneBook
 {

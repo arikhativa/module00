@@ -6,7 +6,7 @@
 /*   By: yrabby <yrabby@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/18 14:00:59 by yrabby            #+#    #+#             */
-/*   Updated: 2023/02/06 10:13:08 by yrabby           ###   ########.fr       */
+/*   Updated: 2023/02/09 15:07:17 by yrabby           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,17 @@ void	PhoneBook::add(void)
 void	PhoneBook::search(void) const
 {
 	_print_all();
+	std::string user_input = Reader::arg("Enter index");
+	if (user_input.empty() || !std::isdigit(user_input.c_str()[0]))
+	{
+		std::cout << "Invalid index" << std::endl;
+		return ;
+	}
+	int index = atoi(user_input.c_str());
+	if (index >= 0 && index < LIST_MAX_SIZE && !_list[index].empty())
+		_list[index].print();
+	else
+		std::cout << "Invalid index" << std::endl;
 }
 
 int	PhoneBook::_get_contact_index(void)

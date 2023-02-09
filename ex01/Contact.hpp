@@ -6,7 +6,7 @@
 /*   By: yrabby <yrabby@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/18 14:00:59 by yrabby            #+#    #+#             */
-/*   Updated: 2023/02/06 09:29:45 by yrabby           ###   ########.fr       */
+/*   Updated: 2023/02/09 14:58:43 by yrabby           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ class Contact
 		~Contact();
 		void init(void);
 		void simple_print(int i) const;
+		void print() const;
 		bool empty(void) const;
 	private:
 		std::string	_first_name;
