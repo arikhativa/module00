@@ -6,7 +6,7 @@
 /*   By: yrabby <yrabby@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 13:31:16 by yrabby            #+#    #+#             */
-/*   Updated: 2023/03/21 14:08:44 by yrabby           ###   ########.fr       */
+/*   Updated: 2023/03/21 14:21:41 by yrabby           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	Account::_totalAmount = 0;
 int	Account::_totalNbDeposits = 0;
 int	Account::_totalNbWithdrawals = 0;
 
-void	print_timestamp(void)
+void	Account::_displayTimestamp( void )
 {
 	std::time_t rawtime;
     std::tm* timeinfo;
@@ -39,39 +39,47 @@ Account::Account(int initial_deposit) :
 	_nbDeposits(0),
 	_nbWithdrawals(0)
 {
-	++Account::_nbAccounts;
-	print_timestamp();
+	++_nbAccounts;
+	_displayTimestamp();
 	std::cout << "index:" << _accountIndex << ";amount:" << _amount << ";created" << std::endl;
 }
 
 Account::~Account( void )
 {
-
+	--_nbAccounts;
+	_displayTimestamp();
+	std::cout << "index:" << _accountIndex << ";amount:" << _amount << ";closed" << std::endl;
 }
 
 int	Account::getNbAccounts( void )
 {
-	return 0;
+	return _nbAccounts;
 }
 
 int	Account::getTotalAmount( void )
 {
-	return 0;
+	return _totalAmount;
 }
 
 int	Account::getNbDeposits( void )
 {
-	return 0;
+	return _totalNbDeposits;
 }
 
 int	Account::getNbWithdrawals( void )
 {
-	return 0;
+	return _totalNbWithdrawals;
 }
 
 void	Account::displayAccountsInfos( void )
 {
-
+	_displayTimestamp();
+	std::cout
+		<< "accounts:" << getNbAccounts() 
+		<< ";total:" << getTotalAmount()
+		<< ";deposits:" << getNbDeposits()
+		<< ";withdrawals:" << getNbWithdrawals()
+		<< std::endl;
 }
 
 void	Account::makeDeposit( int deposit )
