@@ -6,7 +6,7 @@
 /*   By: yrabby <yrabby@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/18 14:00:59 by yrabby            #+#    #+#             */
-/*   Updated: 2023/02/09 15:04:00 by yrabby           ###   ########.fr       */
+/*   Updated: 2023/04/20 13:02:03 by yrabby           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ appStatus Reader::cli(void) const
 	std::string input;
 
 	std::cout << _prompt << std::endl;
-	std::cin >> input;
+	std::getline(std::cin, input);
 	if (_ADD_STR == input)
 		return ADD;
 	else if (_SEARCH_STR == input)
@@ -43,6 +43,6 @@ std::string Reader::arg(std::string arg_name)
 	std::string input = "";
 
 	std::cout << arg_name << ":" << std::endl;
-	std::cin >> input;
+	std::getline(std::cin, input);
 	return input;
 }

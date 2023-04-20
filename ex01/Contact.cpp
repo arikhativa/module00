@@ -6,7 +6,7 @@
 /*   By: yrabby <yrabby@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/18 14:01:02 by yrabby            #+#    #+#             */
-/*   Updated: 2023/02/09 14:59:49 by yrabby           ###   ########.fr       */
+/*   Updated: 2023/04/20 12:50:30 by yrabby           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,7 @@ Contact::Contact() : _first_name(""),
 Contact::~Contact()
 {
 }
-// TODO
-// A saved contact can’t have empty fields.
+
 void Contact::init()
 {
 	std::cout << "Enter Contact Details" << std::endl;
@@ -36,10 +35,16 @@ void Contact::init()
 	std::cout << "done! contact have been added :)" << std::endl;
 }
 
-// TODO check why tab is borken with ADD
+static std::string	to_string(int num)
+{
+	std::ostringstream ss;
+	ss << num;
+	return ss.str();
+}
+
 void	Contact::simple_print(int i) const
 {
-	std::string index = to_string<int>(i);
+	std::string index = to_string(i);
 	std::cout << std::setiosflags(std::ios_base::right);
 	Util::print_with_width(index) << SPACER;
 	Util::print_with_width(_first_name) << SPACER;

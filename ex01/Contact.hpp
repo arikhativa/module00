@@ -6,7 +6,7 @@
 /*   By: yrabby <yrabby@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/18 14:00:59 by yrabby            #+#    #+#             */
-/*   Updated: 2023/02/09 14:58:43 by yrabby           ###   ########.fr       */
+/*   Updated: 2023/04/20 12:50:36 by yrabby           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,6 @@
 # include "Util.hpp"
 
 const std::string	SPACER = " | ";
-
-// TODO
-// check if publick should be before private
-// i think u need to add namepace
 
 class Contact
 {
