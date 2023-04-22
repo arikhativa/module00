@@ -6,7 +6,7 @@
 /*   By: yrabby <yrabby@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/18 14:00:59 by yrabby            #+#    #+#             */
-/*   Updated: 2023/04/20 13:02:03 by yrabby           ###   ########.fr       */
+/*   Updated: 2023/04/22 15:47:29 by yrabby           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,5 +44,11 @@ std::string Reader::arg(std::string arg_name)
 
 	std::cout << arg_name << ":" << std::endl;
 	std::getline(std::cin, input);
+	while (input.empty() || !std::cin.good())
+	{
+		std::cerr << "invalid input, try again" << std::endl;
+		std::cin.clear();
+		std::getline(std::cin, input);
+	}
 	return input;
 }
