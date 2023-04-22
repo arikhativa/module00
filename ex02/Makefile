@@ -6,7 +6,7 @@
 #    By: yrabby <yrabby@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/18 13:56:52 by yrabby            #+#    #+#              #
-#    Updated: 2023/03/21 13:28:43 by yrabby           ###   ########.fr        #
+#    Updated: 2023/04/22 11:12:58 by yrabby           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ CLASS_DIR				= .
 CLASS_NAME				= Account
 
 # main
-SRC_MAIN				= test
+SRC_MAIN				= tests
 
 # src
 SRC_SUFFIX				= .cpp
